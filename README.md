@@ -1,2 +1,3 @@
-# aspnetcore-aws-labs
-ASP.NET Core and AWS demos
+# ASP.NET Core AWS Labs
+
+### Coming soon
