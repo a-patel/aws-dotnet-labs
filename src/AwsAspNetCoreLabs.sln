@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsAspNetCoreLabs.SQS", "Aw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsAspNetCoreLabs.SNS", "AwsAspNetCoreLabs.SNS\AwsAspNetCoreLabs.SNS.csproj", "{DDEA7B98-B741-4FBD-9E78-6703FF9CD3BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsAspNetCoreLabs.ElastiCache", "AwsAspNetCoreLabs.ElastiCache\AwsAspNetCoreLabs.ElastiCache.csproj", "{D77EE81B-249D-484E-BA11-5DAC2B350993}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DDEA7B98-B741-4FBD-9E78-6703FF9CD3BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDEA7B98-B741-4FBD-9E78-6703FF9CD3BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDEA7B98-B741-4FBD-9E78-6703FF9CD3BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D77EE81B-249D-484E-BA11-5DAC2B350993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D77EE81B-249D-484E-BA11-5DAC2B350993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D77EE81B-249D-484E-BA11-5DAC2B350993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D77EE81B-249D-484E-BA11-5DAC2B350993}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

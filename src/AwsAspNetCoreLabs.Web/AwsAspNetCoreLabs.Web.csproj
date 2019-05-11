@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AwsAspNetCoreLabs.ElastiCache\AwsAspNetCoreLabs.ElastiCache.csproj" />
     <ProjectReference Include="..\AwsAspNetCoreLabs.S3\AwsAspNetCoreLabs.S3.csproj" />
     <ProjectReference Include="..\AwsAspNetCoreLabs.SES\AwsAspNetCoreLabs.SES.csproj" />
     <ProjectReference Include="..\AwsAspNetCoreLabs.SNS\AwsAspNetCoreLabs.SNS.csproj" />
