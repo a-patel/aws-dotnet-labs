@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AwsAspNetCoreLabs.S3\AwsAspNetCoreLabs.S3.csproj" />
+    <ProjectReference Include="..\AwsAspNetCoreLabs.SES\AwsAspNetCoreLabs.SES.csproj" />
   </ItemGroup>
 
 </Project>

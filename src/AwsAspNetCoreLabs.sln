@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsAspNetCoreLabs.Web", "Aw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsAspNetCoreLabs.S3", "AwsAspNetCoreLabs.S3\AwsAspNetCoreLabs.S3.csproj", "{AF17E246-E9C9-4A7F-8FE6-B782FD0C5166}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsAspNetCoreLabs.SES", "AwsAspNetCoreLabs.SES\AwsAspNetCoreLabs.SES.csproj", "{0239E4EA-67CE-4538-81AA-AF009C983E86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AF17E246-E9C9-4A7F-8FE6-B782FD0C5166}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF17E246-E9C9-4A7F-8FE6-B782FD0C5166}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF17E246-E9C9-4A7F-8FE6-B782FD0C5166}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0239E4EA-67CE-4538-81AA-AF009C983E86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0239E4EA-67CE-4538-81AA-AF009C983E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0239E4EA-67CE-4538-81AA-AF009C983E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0239E4EA-67CE-4538-81AA-AF009C983E86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
