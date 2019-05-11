@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsAspNetCoreLabs.Web", "AwsAspNetCoreLabs.Web\AwsAspNetCoreLabs.Web.csproj", "{80E71D71-109B-43BC-802F-5383E085C5DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwsAspNetCoreLabs.Web", "AwsAspNetCoreLabs.Web\AwsAspNetCoreLabs.Web.csproj", "{80E71D71-109B-43BC-802F-5383E085C5DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsAspNetCoreLabs.S3", "AwsAspNetCoreLabs.S3\AwsAspNetCoreLabs.S3.csproj", "{AF17E246-E9C9-4A7F-8FE6-B782FD0C5166}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwsAspNetCoreLabs.S3", "AwsAspNetCoreLabs.S3\AwsAspNetCoreLabs.S3.csproj", "{AF17E246-E9C9-4A7F-8FE6-B782FD0C5166}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsAspNetCoreLabs.SES", "AwsAspNetCoreLabs.SES\AwsAspNetCoreLabs.SES.csproj", "{0239E4EA-67CE-4538-81AA-AF009C983E86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AwsAspNetCoreLabs.SES", "AwsAspNetCoreLabs.SES\AwsAspNetCoreLabs.SES.csproj", "{0239E4EA-67CE-4538-81AA-AF009C983E86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsAspNetCoreLabs.SQS", "AwsAspNetCoreLabs.SQS\AwsAspNetCoreLabs.SQS.csproj", "{FFDE4B62-214D-4619-A2DF-0CB5BF563C49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{0239E4EA-67CE-4538-81AA-AF009C983E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0239E4EA-67CE-4538-81AA-AF009C983E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0239E4EA-67CE-4538-81AA-AF009C983E86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFDE4B62-214D-4619-A2DF-0CB5BF563C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFDE4B62-214D-4619-A2DF-0CB5BF563C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFDE4B62-214D-4619-A2DF-0CB5BF563C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFDE4B62-214D-4619-A2DF-0CB5BF563C49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
