@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsAspNetCoreLabs.Web", "AwsAspNetCoreLabs.Web\AwsAspNetCoreLabs.Web.csproj", "{80E71D71-109B-43BC-802F-5383E085C5DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsAspNetCoreLabs.S3", "AwsAspNetCoreLabs.S3\AwsAspNetCoreLabs.S3.csproj", "{AF17E246-E9C9-4A7F-8FE6-B782FD0C5166}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{80E71D71-109B-43BC-802F-5383E085C5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80E71D71-109B-43BC-802F-5383E085C5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80E71D71-109B-43BC-802F-5383E085C5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF17E246-E9C9-4A7F-8FE6-B782FD0C5166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF17E246-E9C9-4A7F-8FE6-B782FD0C5166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF17E246-E9C9-4A7F-8FE6-B782FD0C5166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF17E246-E9C9-4A7F-8FE6-B782FD0C5166}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
