@@ -1,33 +1,111 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿#region Imports
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Caching.Distributed;
+using AwsAspNetCoreLabs.Models.Settings;
+using AwsAspNetCoreLabs.S3;
+using AwsAspNetCoreLabs.SQS;
+using AwsAspNetCoreLabs.SES;
+#endregion
 
 namespace AwsAspNetCoreLabs.Web
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
+        public IConfiguration Configuration { get; }
+
+        public Startup(IConfiguration configuration)
         {
+            Configuration = configuration;
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void ConfigureServices(IServiceCollection services)
+        {
+            // Configure service settings using appsettings 
+            services.Configure<S3Settings>(Configuration.GetSection("Storage"));
+            services.Configure<SQSSettings>(Configuration.GetSection("Queueing"));
+            services.Configure<SESSettings>(Configuration.GetSection("Email"));
+
+            services.AddSingleton<INoteStorageService, S3NoteStorageService>();
+            services.AddSingleton<IEventPublisher, SQSEventPublisher>();
+            services.AddSingleton<INoteEmailService, SESNoteEmailService>();
+
+            //// Adds a Redis in-memory implementation of IDistributedCache.
+            //services.AddDistributedRedisCache(options =>
+            //{
+            //    options.Configuration = Configuration["Caching:RedisPrimaryEndpoint"];
+            //});
+
+            services.AddSingleton(provider =>
+                new DistributedCacheEntryOptions()
+                .SetSlidingExpiration(
+                    TimeSpan.FromMinutes(
+                        int.Parse(Configuration["Caching:CacheExpirationInMinutes"])
+                    )
+                )
+            );
+
+            //services.AddDynamoDbSession(
+            //    Configuration["Session:DynamoDbTableName"],
+            //    Configuration["Session:DynamoDbRegion"],
+            //    options =>
+            //    {
+            //        // Set a short timeout for easy testing.
+            //        options.IdleTimeout = TimeSpan.FromMinutes(int.Parse(Configuration["Session:IdleTimeoutInMinutes"]));
+            //        options.Cookie.HttpOnly = true;
+            //    });
+
+            services.AddMvc();
+
+            // call this in case you need aspnet-user-authtype/aspnet-user-identity
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+        }
+
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseSession();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                //app.UseBrowserLink();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
             }
 
-            app.Run(async (context) =>
+            app.UseStaticFiles();
+
+            app.Use(async (context, next) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                int? pageCount = context.Session.GetInt32("PageCount");
+
+                // increment the number of pages viewed in the current session
+                if (pageCount.HasValue)
+                {
+                    context.Session.SetInt32("PageCount", pageCount.Value + 1);
+                }
+                else
+                {
+                    context.Session.SetInt32("PageCount", 1);
+                }
+
+                await next.Invoke();
+            });
+
+            //app.UseAuthentication();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
