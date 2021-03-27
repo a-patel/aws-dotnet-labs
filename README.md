@@ -27,7 +27,7 @@ AWS Services implementaions in ASP.NET Core/.NET 5.x
 
 
 
-#### [S3 (Simple Cloud Storage)](https://github.com/a-patel/aws-s3-dotnet-labs)
+#### [S3 (Simple Storage Service)](https://github.com/a-patel/aws-s3-dotnet-labs)
 
 
 
@@ -88,6 +88,22 @@ AWS Services implementaions in ASP.NET Core/.NET 5.x
 
 
 #### [Many more: Coming Soon]()
+
+
+
+
+
+---
+
+
+## Other AWS Lambda Labs
+
+
+### [AWS Lambda: Python Labs](https://github.com/a-patel/aws-lambda-python-labs)
+
+
+### [AWS Lambda: Node.js Labs](https://github.com/a-patel/aws-lambda-nodejs-labs)
+
 
 
 
