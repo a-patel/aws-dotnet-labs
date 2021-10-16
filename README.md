@@ -5,6 +5,9 @@
 AWS Services implementaions in ASP.NET Core/.NET 5.x
 
 
+.NET 6.0 - Coming soon...
+
+
 
 [Awesome Cloud](https://medium.com/awesome-cloud) - AWS blogs! The must-read publication for aspiring AWS developers & DevOps enthusiasts!
 
