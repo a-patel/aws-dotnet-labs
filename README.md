@@ -7,7 +7,7 @@ AWS Services implementaions in ASP.NET.
 
 
 
-[Awesome Cloud](https://medium.com/awesome-cloud) - AWS blogs! The must-read publication for aspiring AWS developers & DevOps enthusiasts!
+[Awesome Cloud](https://medium.com/awesome-cloud) - AWS blogs! The must-read publication for aspiring AWS Architects, Developers & DevOps enthusiasts!
 
 
 
