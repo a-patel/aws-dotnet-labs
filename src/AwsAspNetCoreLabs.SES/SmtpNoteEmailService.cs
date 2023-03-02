@@ -27,7 +27,7 @@ namespace AwsAspNetCoreLabs.SES
                 var emailMessage = new MimeMessage();
 
                 emailMessage.From.Add(new MailboxAddress(_settings.FromName, _settings.FromAddress));
-                emailMessage.To.Add(new MailboxAddress(email));
+                emailMessage.To.Add(new MailboxAddress(email, email));
                 emailMessage.Subject = $"AwsAspNetCoreLabs. - {note.Title}";
                 emailMessage.Body = new TextPart("plain") { Text = note.Content };
 
