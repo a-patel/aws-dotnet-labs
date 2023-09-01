@@ -123,7 +123,7 @@ AWS Services implementaions in ASP.NET.
 
 ## Give a Star! :star:
 
-Feel free to request an issue on github if you find bugs or request a new feature. Your valuable feedback is much appreciated to better improve this project. If you find this useful, please give it a star to show your support for this project.
+Feel free to request an issue on GitHub if you find bugs or request a new feature. Your valuable feedback is much appreciated to improve this project better. If you find this helpful, please give it a star to support this project.
 
 
 ## Support :telephone:
